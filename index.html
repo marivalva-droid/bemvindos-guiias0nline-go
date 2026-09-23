@@ -1,1 +1,663 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Campos Floridos Comércio de Cosméticos LTDA - CNPJ 01.239.313/0004-02. Comércio varejista de cosméticos, perfumaria e higiene pessoal. Solicite o selo G2.">
+    <meta name="keywords" content="cosméticos, perfumaria, higiene pessoal, Campos Floridos, CNPJ 01239313000402, Extrema MG, G2">
+    <meta name="author" content="Campos Floridos Comércio de Cosméticos LTDA">
+    <title>Campos Floridos Cosméticos | Comércio Varejista de Cosméticos e Perfumaria</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #6a1b9a, #ab47bc);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .logo p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 4px;
+        }
+
+        .header-cta a {
+            display: inline-block;
+            background: #ffb300;
+            color: #333;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-cta a:hover {
+            background: #ffa000;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: 4px solid #ab47bc;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            color: #4a148c;
+            margin-bottom: 20px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .hero .btn-hero {
+            display: inline-block;
+            background: #6a1b9a;
+            color: white;
+            padding: 16px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(106, 27, 154, 0.4);
+        }
+
+        .hero .btn-hero:hover {
+            background: #4a148c;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(106, 27, 154, 0.5);
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+        }
+
+        section:nth-child(even) {
+            background-color: white;
+        }
+
+        h3.section-title {
+            font-size: 2rem;
+            color: #4a148c;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h3.section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #ab47bc;
+            border-radius: 2px;
+        }
+
+        /* Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid #ab47bc;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h4 {
+            font-size: 1.3rem;
+            color: #6a1b9a;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card ul li {
+            padding: 6px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .card ul li strong {
+            color: #4a148c;
+        }
+
+        /* Info Table */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .info-table th,
+        .info-table td {
+            padding: 14px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-table th {
+            background: #f3e5f5;
+            color: #4a148c;
+            font-weight: 700;
+            width: 35%;
+        }
+
+        .info-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* CNAE List */
+        .cnae-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .cnae-tag {
+            display: inline-block;
+            background: #f3e5f5;
+            color: #4a148c;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid #ce93d8;
+        }
+
+        .cnae-tag.principal {
+            background: #6a1b9a;
+            color: white;
+            border-color: #6a1b9a;
+        }
+
+        /* G2 Form */
+        .g2-section {
+            background: linear-gradient(135deg, #4a148c, #6a1b9a);
+            color: white;
+            padding: 60px 0;
+        }
+
+        .g2-section h3 {
+            color: white;
+        }
+
+        .g2-section h3::after {
+            background: #ffb300;
+        }
+
+        .g2-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .g2-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .g2-form input,
+        .g2-form select,
+        .g2-form textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            transition: border-color 0.3s ease;
+            font-family: inherit;
+        }
+
+        .g2-form input::placeholder,
+        .g2-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .g2-form input:focus,
+        .g2-form select:focus,
+        .g2-form textarea:focus {
+            outline: none;
+            border-color: #ffb300;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .g2-form select option {
+            color: #333;
+            background: white;
+        }
+
+        .g2-form button {
+            width: 100%;
+            padding: 16px;
+            background: #ffb300;
+            color: #333;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .g2-form button:hover {
+            background: #ffa000;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 179, 0, 0.4);
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .contact-item .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-item h4 {
+            color: #6a1b9a;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .contact-item p {
+            color: #666;
+            font-size: 0.95rem;
+            word-break: break-word;
+        }
+
+        .contact-item a {
+            color: #6a1b9a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c2c2c;
+            color: #bbb;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        footer .footer-links {
+            margin: 20px 0;
+        }
+
+        footer .footer-links a {
+            color: #ce93d8;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9rem;
+        }
+
+        footer .footer-links a:hover {
+            color: #ffb300;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo h1 {
+                font-size: 1.4rem;
+            }
+
+            .info-table th,
+            .info-table td {
+                padding: 10px 14px;
+                font-size: 0.9rem;
+            }
+
+            .g2-form {
+                padding: 25px;
+            }
+
+            h3.section-title {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 50px 0;
+            }
+
+            .hero h2 {
+                font-size: 1.6rem;
+            }
+
+            .hero .btn-hero {
+                padding: 14px 30px;
+                font-size: 1rem;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>🌸 Campos Floridos Cosméticos</h1>
+                <p>CNPJ: 01.239.313/0004-02 | Extrema - MG</p>
+            </div>
+            <div class="header-cta">
+                <a href="#g2">Solicitar Selo G2</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h2>Beleza e Cuidado Pessoal com Qualidade</h2>
+            <p>Comércio varejista de cosméticos, produtos de perfumaria e higiene pessoal. Atendemos com excelência e compromisso.</p>
+            <a href="#g2" class="btn-hero">Solicitar Selo G2</a>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+        <div class="container">
+            <h3 class="section-title">Sobre a Empresa</h3>
+            <div class="cards-grid">
+                <div class="card">
+                    <h4>🏢 Quem Somos</h4>
+                    <p>A <strong>Campos Floridos Comércio de Cosméticos LTDA</strong> é uma empresa filial fundada em <strong>05/06/2017</strong>, localizada em Extrema, Minas Gerais. Atuamos no comércio varejista de cosméticos, produtos de perfumaria e higiene pessoal, oferecendo qualidade e variedade para nossos clientes.</p>
+                </div>
+                <div class="card">
+                    <h4>📊 Dados Cadastrais</h4>
+                    <ul>
+                        <li><strong>CNPJ:</strong> 01.239.313/0004-02</li>
+                        <li><strong>Razão Social:</strong> Campos Floridos Comercio de Cosmeticos LTDA</li>
+                        <li><strong>Data de Abertura:</strong> 05/06/2017</li>
+                        <li><strong>Porte:</strong> Sem Enquadramento</li>
+                        <li><strong>Natureza Jurídica:</strong> Sociedade Empresária Limitada</li>
+                        <li><strong>Situação:</strong> Ativa</li>
+                        <li><strong>Capital Social:</strong> R$ 145.955.475,00</li>
+                        <li><strong>Tipo:</strong> Filial</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>📋 Inscrições Estaduais</h4>
+                    <ul>
+                        <li><strong>MG:</strong> 002739918.01-72</li>
+                        <li><strong>PB:</strong> 16.901.878-4</li>
+                        <li><strong>PE:</strong> 0740574-05</li>
+                        <li><strong>PR:</strong> 09906971-67</li>
+                        <li><strong>RS:</strong> 900/0054384</li>
+                        <li><strong>SP:</strong> 813.017.961.118</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Atividades -->
+    <section id="atividades">
+        <div class="container">
+            <h3 class="section-title">Atividades Econômicas (CNAEs)</h3>
+            <div class="card" style="margin-bottom: 30px;">
+                <h4>Atividade Principal</h4>
+                <div class="cnae-list">
+                    <span class="cnae-tag principal">47.72-5-00 - Comércio varejista de cosméticos, produtos de perfumaria e de higiene pessoal</span>
+                </div>
+            </div>
+            <div class="card">
+                <h4>Atividades Secundárias</h4>
+                <div class="cnae-list">
+                    <span class="cnae-tag">63.19-4-00 - Portais, provedores de conteúdo e outros serviços de informação na internet</span>
+                    <span class="cnae-tag">74.90-1-04 - Atividades de intermediação e agenciamento de serviços e negócios em geral, exceto imobiliários</span>
+                    <span class="cnae-tag">47.61-0-01 - Comércio varejista de livros</span>
+                    <span class="cnae-tag">82.20-2-00 - Atividades de teleatendimento</span>
+                    <span class="cnae-tag">47.89-0-05 - Comércio varejista de produtos saneantes domissanitários</span>
+                    <span class="cnae-tag">64.63-8-00 - Outras sociedades de participação, exceto holdings</span>
+                    <span class="cnae-tag">47.29-6-99 - Comércio varejista de produtos alimentícios em geral ou especializado em produtos alimentícios não especificados anteriormente</span>
+                    <span class="cnae-tag">47.74-1-00 - Comércio varejista de artigos de óptica</span>
+                    <span class="cnae-tag">47.85-7-99 - Comércio varejista de outros artigos usados</span>
+                    <span class="cnae-tag">62.01-5-02 - Web design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quadro de Sócios -->
+    <section id="socios">
+        <div class="container">
+            <h3 class="section-title">Quadro de Sócios e Administradores</h3>
+            <div class="cards-grid">
+                <div class="card">
+                    <h4>👤 Christiane Bistaco Rigotto</h4>
+                    <p><strong>Administrador</strong></p>
+                </div>
+                <div class="card">
+                    <h4>🏦 Magazine Luiza S/A</h4>
+                    <p><strong>Sócio</strong> — Representado por Maria Isabel Bonfim de Oliveira</p>
+                </div>
+                <div class="card">
+                    <h4>👤 Maria Isabel Bonfim de Oliveira</h4>
+                    <p><strong>Administrador</strong></p>
+                </div>
+                <div class="card">
+                    <h4>👤 Roberto Bellissimo Rodrigues</h4>
+                    <p><strong>Administrador</strong></p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 30px; color: #666;"><strong>Qualificação do responsável pela empresa:</strong> Administrador</p>
+        </div>
+    </section>
+
+    <!-- Localização e Contato -->
+    <section id="contato">
+        <div class="container">
+            <h3 class="section-title">Localização e Contato</h3>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="icon">📍</div>
+                    <h4>Endereço</h4>
+                    <p>Estrada Municipal Maria Margarida Pinto (Dona Belinha), 742<br>
+                    Setor E<br>
+                    Distrito Industrial Pires<br>
+                    Extrema - MG<br>
+                    CEP: 37642-558</p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">📞</div>
+                    <h4>Telefones</h4>
+                    <p><a href="tel:+556332159400">(63) 3215-9400</a><br>
+                    <a href="tel:+551135042011">(11) 3504-2011</a></p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">✉️</div>
+                    <h4>E-mail</h4>
+                    <p><a href="mailto:fiscal.estadual@magazineluiza.com.br">fiscal.estadual@magazineluiza.com.br</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- G2 Form -->
+    <section id="g2" class="g2-section">
+        <div class="container">
+            <h3 class="section-title">Solicitar Selo G2</h3>
+            <form class="g2-form" action="#" method="POST">
+                <label for="nome">Nome Completo *</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+
+                <label for="email">E-mail Corporativo *</label>
+                <input type="email" id="email" name="email" placeholder="seuemail@empresa.com.br" required>
+
+                <label for="empresa">Empresa *</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Nome da sua empresa" required>
+
+                <label for="cargo">Cargo *</label>
+                <input type="text" id="cargo" name="cargo" placeholder="Seu cargo" required>
+
+                <label for="telefone">Telefone *</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+
+                <label for="motivo">Motivo da Solicitação *</label>
+                <select id="motivo" name="motivo" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="avaliacao">Avaliação de Produto/Serviço</option>
+                    <option value="reconhecimento">Reconhecimento de Mercado</option>
+                    <option value="parceria">Parceria Comercial</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <label for="mensagem">Mensagem (opcional)</label>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva brevemente sua solicitação..."></textarea>
+
+                <button type="submit">Enviar Solicitação</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Campos Floridos Comercio de Cosmeticos LTDA</strong></p>
+            <p>CNPJ: 01.239.313/0004-02 | Inscrição Estadual MG: 002739918.01-72</p>
+            <p>Estrada Municipal Maria Margarida Pinto (Dona Belinha), 742 — Distrito Industrial Pires — Extrema/MG — CEP: 37642-558</p>
+            <div class="footer-links">
+                <a href="#sobre">Sobre</a>
+                <a href="#atividades">Atividades</a>
+                <a href="#contato">Contato</a>
+                <a href="#g2">Selo G2</a>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.8rem; color: #777;">&copy; 2025 Campos Floridos Cosméticos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
